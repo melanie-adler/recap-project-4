@@ -9,7 +9,7 @@ function App() {
       <ul>
         {initialColors.map((color) => {
           return (
-            <li key={color.id} style={{ listStyleType: "none" }}>
+            <li key={color.id} className="color-list">
               <Color color={color} />
             </li>
           );

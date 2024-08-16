@@ -9,3 +9,7 @@
   background: black;
   color: white;
 }
+
+.color-list {
+  list-style-type: none;
+}
