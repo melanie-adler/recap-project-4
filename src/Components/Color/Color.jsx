@@ -1,6 +1,7 @@
+import DeleteButton from "../DeleteButon/DeleteButton";
 import "./Color.css";
 
-export default function Color({ color }) {
+export default function Color({ color, id, onDeleteColor }) {
   return (
     <div
       className="color-card"
@@ -11,6 +12,7 @@ export default function Color({ color }) {
         <b>{color.role}</b>
       </p>
       <p>contrast: {color.contrast}</p>
+      <DeleteButton id={id} onDeleteColor={onDeleteColor} />
     </div>
   );
 }
