@@ -13,19 +13,31 @@ function App() {
     setColors([colorWithId, ...colors]);
   }
 
+  function handleDeleteColor(id) {
+    setColors(colors.filter((color) => color.id !== id));
+  }
+
   return (
     <>
       <h1>Theme Creator</h1>
       <ColorForm onSubmitColor={handleNewColor} />
-      <ul>
-        {colors.map((color) => {
-          return (
-            <li key={color.id} className="color-list">
-              <Color color={color} />
-            </li>
-          );
-        })}
-      </ul>
+      {colors.length > 0 ? (
+        <ul>
+          {colors.map((color) => {
+            return (
+              <li key={color.id} className="color-list">
+                <Color
+                  color={color}
+                  id={color.id}
+                  onDeleteColor={handleDeleteColor}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <p>Add a new Color!</p>
+      )}
     </>
   );
 }
