@@ -1,11 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function ColorInput({ id, value, defaultValue, onChange }) {
   const [InputValue, setInputValue] = useState(value);
-
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
 
   function handleChange(event) {
     setInputValue(event.target.value);
