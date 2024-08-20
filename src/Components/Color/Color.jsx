@@ -1,7 +1,8 @@
 import DeleteButton from "../DeleteButon/DeleteButton";
+import EditButton from "../EditButton/EditButton";
 import "./Color.css";
 
-export default function Color({ color, id, onDeleteColor }) {
+export default function Color({ color, onDeleteColor, onEditColor }) {
   return (
     <div
       className="color-card"
@@ -12,7 +13,8 @@ export default function Color({ color, id, onDeleteColor }) {
         <b>{color.role}</b>
       </p>
       <p>contrast: {color.contrast}</p>
-      <DeleteButton id={id} onDeleteColor={onDeleteColor} />
+      <DeleteButton id={color.id} onDeleteColor={onDeleteColor} />
+      <EditButton color={color} onEditColor={onEditColor} />
     </div>
   );
 }
