@@ -13,8 +13,10 @@ export default function Color({ color, onDeleteColor, onEditColor }) {
         <b>{color.role}</b>
       </p>
       <p>contrast: {color.contrast}</p>
-      <DeleteButton id={color.id} onDeleteColor={onDeleteColor} />
-      <EditButton color={color} onEditColor={onEditColor} />
+      <div className="options-area">
+        <EditButton color={color} onEditColor={onEditColor} />
+        <DeleteButton id={color.id} onDeleteColor={onDeleteColor} />
+      </div>
     </div>
   );
 }

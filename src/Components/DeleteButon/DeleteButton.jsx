@@ -17,27 +17,31 @@ export default function DeleteButton({ onDeleteColor, id }) {
   }
 
   return (
-    <div>
+    <div className="delete-options">
       {isDeleting ? (
         <>
           <span>Really delete?</span>
           <button
             type="button"
             onClick={handleCancel}
-            className="color-card-highlight"
+            className="color-card-cancel"
           >
             Cancel
           </button>
           <button
             type="button"
             onClick={handleConfirm}
-            className="color-card-highlight"
+            className="color-card-delete-final"
           >
             Delete
           </button>
         </>
       ) : (
-        <button type="button" onClick={handleDelete}>
+        <button
+          type="button"
+          onClick={handleDelete}
+          className="color-card-delete"
+        >
           Delete
         </button>
       )}

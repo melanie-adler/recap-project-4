@@ -1,6 +1,32 @@
-.color-card-highlight {
+.color-card-delete {
   display: inline;
   padding: 2px 6px;
-  background: black;
+  background: white;
+  color: red;
+  border-radius: 5px;
+  border: none;
+}
+
+.color-card-delete-final {
+  display: inline;
+  padding: 2px 6px;
+  background: red;
   color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+.color-card-cancel {
+  display: inline;
+  padding: 2px 6px;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  border: none;
+}
+
+.delete-options {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
 }
