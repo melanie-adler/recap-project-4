@@ -10,6 +10,12 @@
   justify-content: space-between;
 }
 
+.copy-area {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
 .color-card-headline {
   display: inline;
   padding: 2px 6px;
