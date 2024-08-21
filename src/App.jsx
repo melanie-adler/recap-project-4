@@ -32,7 +32,7 @@ function App() {
       <h1>Theme Creator</h1>
       <ColorForm onSubmitColor={handleNewColor} />
       {colors.length > 0 ? (
-        <ul>
+        <ul className="color-list-container">
           {colors.map((color) => {
             return (
               <li key={color.id} className="color-list">

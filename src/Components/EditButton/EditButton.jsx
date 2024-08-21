@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ColorInput from "../ColorInput/ColorInput";
+import "./EditButton.css";
 
 export default function EditButton({ color, onEditColor }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -49,15 +50,29 @@ export default function EditButton({ color, onEditColor }) {
             onChange={handleEdit}
           />
           <br />
-          <button type="button" onClick={handleUpdateColor}>
-            Save
-          </button>
-          <button type="button" onClick={handleCancel}>
-            Cancel
-          </button>
+          <div className="saving-options">
+            <button
+              type="button"
+              onClick={handleUpdateColor}
+              className="color-card-save"
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              onClick={handleCancel}
+              className="color-card-edit"
+            >
+              Cancel
+            </button>
+          </div>
         </div>
       ) : (
-        <button type="button" onClick={handleEditClick}>
+        <button
+          type="button"
+          onClick={handleEditClick}
+          className="color-card-edit"
+        >
           Edit
         </button>
       )}

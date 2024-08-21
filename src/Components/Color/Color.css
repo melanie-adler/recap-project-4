@@ -1,6 +1,19 @@
 .color-card {
-  margin: 0px 10px;
+  margin: 10px;
   padding: 5px;
+  border-radius: 10px;
+}
+
+.options-area {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.copy-area {
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 .color-card-headline {
@@ -8,6 +21,12 @@
   padding: 2px 6px;
   background: black;
   color: white;
+  border-radius: 5px;
+}
+
+.color-list-container {
+  padding: 0;
+  margin: 0;
 }
 
 .color-list {

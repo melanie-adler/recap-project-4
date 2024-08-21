@@ -1,3 +1,4 @@
+import CopyToClipboard from "../CopyToClipboard/CopyToClipboard";
 import DeleteButton from "../DeleteButon/DeleteButton";
 import EditButton from "../EditButton/EditButton";
 import "./Color.css";
@@ -8,13 +9,18 @@ export default function Color({ color, onDeleteColor, onEditColor }) {
       className="color-card"
       style={{ background: color.hex, color: color.contrast }}
     >
-      <h2 className="color-card-headline">{color.hex}</h2>
+      <div className="copy-area">
+        <h2 className="color-card-headline">{color.hex}</h2>
+        <CopyToClipboard hex={color.hex} />
+      </div>
       <p>
         <b>{color.role}</b>
       </p>
       <p>contrast: {color.contrast}</p>
-      <DeleteButton id={color.id} onDeleteColor={onDeleteColor} />
-      <EditButton color={color} onEditColor={onEditColor} />
+      <div className="options-area">
+        <EditButton color={color} onEditColor={onEditColor} />
+        <DeleteButton id={color.id} onDeleteColor={onDeleteColor} />
+      </div>
     </div>
   );
 }
