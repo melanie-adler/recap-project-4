@@ -1,0 +1,28 @@
+.contrast-score-good {
+  background-color: green;
+  width: fit-content;
+  color: white;
+  border: 1px solid white;
+
+  border-radius: 5px;
+  padding: 0 2px;
+}
+
+.contrast-score-medium {
+  background-color: orange;
+  width: fit-content;
+  color: black;
+  border: 1px solid black;
+
+  border-radius: 5px;
+  padding: 0 2px;
+}
+
+.contrast-score-bad {
+  background-color: red;
+  width: fit-content;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0 2px;
+}

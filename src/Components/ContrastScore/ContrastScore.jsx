@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../ContrastScore/ContrastScore.css";
 
 export default function ContrastScore({ hex, contrast }) {
   const [result, setResult] = useState("");
@@ -20,5 +21,15 @@ export default function ContrastScore({ hex, contrast }) {
     postFetch();
   });
 
-  return <div>Contrast Score: {result}</div>;
+  console.log(result);
+
+  if (result === "Yup") {
+    return <div className="contrast-score-good">Contrast Score: {result}</div>;
+  } else if (result === "Kinda") {
+    return (
+      <div className="contrast-score-medium">Contrast Score: {result}</div>
+    );
+  } else {
+    return <div className="contrast-score-bad">Contrast Score: {result}</div>;
+  }
 }
