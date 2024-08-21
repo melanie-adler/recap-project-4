@@ -7,7 +7,11 @@ export default function CopyToClipboard({ hex }) {
   async function handleCopy() {
     setIsCopied(true);
 
-    await navigator.clipboard.writeText(hex);
+    try {
+      await navigator.clipboard.writeText(hex);
+    } catch (error) {
+      console.error("Copy failed: ", error);
+    }
   }
 
   useEffect(() => {
