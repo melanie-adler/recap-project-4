@@ -11,7 +11,7 @@ export default function CopyToClipboard({ hex }) {
   }
 
   useEffect(() => {
-    if (!isCopied) {
+    if (isCopied) {
       setTimeout(() => {
         setIsCopied(false);
       }, 3000);
