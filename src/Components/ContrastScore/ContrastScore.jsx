@@ -21,8 +21,6 @@ export default function ContrastScore({ hex, contrast }) {
     postFetch();
   });
 
-  console.log(result);
-
   if (result === "Yup") {
     return <div className="contrast-score-good">Contrast Score: {result}</div>;
   } else if (result === "Kinda") {
